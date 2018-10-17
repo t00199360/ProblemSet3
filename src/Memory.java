@@ -1,2 +1,4 @@
-public class Memory {
+public interface Memory
+{
+
 }

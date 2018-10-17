@@ -1,4 +1,4 @@
-public class Computer
+public abstract class Computer implements Memory, Laptop
 {
     private String id;
     private String make;

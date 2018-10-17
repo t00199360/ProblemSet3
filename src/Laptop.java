@@ -1,2 +1,4 @@
-public class Laptop {
+public interface Laptop
+{
+    private boolean touchscreen;
 }
