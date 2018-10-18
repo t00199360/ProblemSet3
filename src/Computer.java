@@ -1,4 +1,4 @@
-public abstract class Computer implements Memory, Laptop
+public class Computer implements IDable
 {
     private String id;
     private String make;
@@ -46,10 +46,17 @@ public abstract class Computer implements Memory, Laptop
 
     //x argument constructor, includes the objects from the other classes
 
+
+
     //toString() method
 
     @Override
     public String toString() {
         return super.toString();
+    }
+
+    @Override
+    public void SetID(String Id) {
+
     }
 }

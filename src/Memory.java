@@ -1,4 +1,4 @@
-public interface Memory
+public abstract class Memory extends Computer
 {
 
 }

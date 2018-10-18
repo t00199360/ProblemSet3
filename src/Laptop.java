@@ -1,4 +1,4 @@
-public interface Laptop
+public abstract class Laptop extends Computer
 {
-    private boolean touchscreen;
+    boolean touchscreen = false;
 }

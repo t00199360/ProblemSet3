@@ -1,3 +1,5 @@
+import javax.swing.*;
+
 public class SavingsAccount extends BankAccount
 {
 
@@ -63,5 +65,28 @@ public class SavingsAccount extends BankAccount
     @Override
     public String toString() {
         return "Name:" + name + "\nAccount Number:" + accNum + "\nBalance:" + balance;
+    }
+    public String toString2() {
+        return "Name:" + name + "\nAccount Number:" + accNum + "\nBalance:" + balance;
+    }
+
+    private void askTrans() {
+        withdraw(0);
+        lodge(0);
+    }
+
+    @Override
+    public void calcTax(double a) {
+
+    }
+
+    @Override
+    public void lodge(double a) {
+        balance=a+balance;
+    }
+
+    @Override
+    public void withdraw(double a) {
+        balance=balance-a;
     }
 }

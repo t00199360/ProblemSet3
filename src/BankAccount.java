@@ -43,19 +43,4 @@ public abstract class BankAccount implements Transactable, Taxable
         this.accNum=accNum;
         this.name=name;
     }
-
-    @Override
-    public void calcTax(double a) {
-
-    }
-
-    @Override
-    public void lodge(double a) {
-
-    }
-
-    @Override
-    public void withdraw(double a) {
-
-    }
 }

@@ -8,10 +8,10 @@ public class SavingsAccountDriver
         JOptionPane.showMessageDialog(null, "Bank Savings Accounts");
 
 
-        SavingsAccount savings = new SavingsAccount();
+       // SavingsAccount savings = new SavingsAccount();
 
-        //no argument constructor print out
-        JOptionPane.showMessageDialog(null, savings.toString());
+        /*//no argument constructor print out
+        JOptionPane.showMessageDialog(null, savings.toString());*/
 
         //creating the array for the objects
         int numAccounts=Integer.parseInt(JOptionPane.showInputDialog(null, "How many accounts would you like to enter into the system?"));
@@ -20,12 +20,27 @@ public class SavingsAccountDriver
 
         for(int i=0;i<numAccounts;i++)
         {
+            double newBal;
+
             //3 argument constructor print out
             String nameAsString = JOptionPane.showInputDialog(null, "What is your name:   ");
             int accNum = Integer.parseInt(JOptionPane.showInputDialog(null, "What is your account number:   "));
             double balAsDouble = Double.parseDouble(JOptionPane.showInputDialog(null, "Please enter your balance:   "));
 
             SavingsAccount hellaBread = new SavingsAccount(accNum, balAsDouble, nameAsString);
+            SavingsAccount s1 = new SavingsAccount();
+
+            JOptionPane.showMessageDialog(null,"" + hellaBread.toString());
+
+            s1.lodge(newBal=Double.parseDouble(JOptionPane.showInputDialog(null, "Please enter the amount you wish to lodge to your account")));
+            System.out.print(hellaBread.getBalance());
+            hellaBread.lodge(newBal);
+
+            s1.withdraw(newBal=Double.parseDouble(JOptionPane.showInputDialog(null, "Please enter the amount you wish to withdraw from your account")));
+            System.out.print(hellaBread.getBalance());
+            hellaBread.withdraw(newBal);
+
+
             accountArray[i]= hellaBread;
         }
 
@@ -33,4 +48,5 @@ public class SavingsAccountDriver
         JOptionPane.showMessageDialog(null, Arrays.toString(accountArray).replace("[","").replace("]","").replace(",","\n"));
         System.exit(0);
     }
+
 }
