@@ -27,21 +27,23 @@ public class SavingsAccountDriver
             int accNum = Integer.parseInt(JOptionPane.showInputDialog(null, "What is your account number:   "));
             double balAsDouble = Double.parseDouble(JOptionPane.showInputDialog(null, "Please enter your balance:   "));
 
-            SavingsAccount hellaBread = new SavingsAccount(accNum, balAsDouble, nameAsString);
+            SavingsAccount SAObject = new SavingsAccount(accNum, balAsDouble, nameAsString);
             SavingsAccount s1 = new SavingsAccount();
 
-            JOptionPane.showMessageDialog(null,"" + hellaBread.toString());
+            JOptionPane.showMessageDialog(null,"" + SAObject.toString());
 
             s1.lodge(newBal=Double.parseDouble(JOptionPane.showInputDialog(null, "Please enter the amount you wish to lodge to your account")));
-            System.out.print(hellaBread.getBalance());
-            hellaBread.lodge(newBal);
+            System.out.print(SAObject.getBalance());
+            SAObject.lodge(newBal);
 
             s1.withdraw(newBal=Double.parseDouble(JOptionPane.showInputDialog(null, "Please enter the amount you wish to withdraw from your account")));
-            System.out.print(hellaBread.getBalance());
-            hellaBread.withdraw(newBal);
+            System.out.print(SAObject.getBalance());
+            SAObject.withdraw(newBal);
 
+            double balAfterTax = s1.calcTax();
+            JOptionPane.showMessageDialog(null,"This is your balance after tax: " + balAfterTax);
 
-            accountArray[i]= hellaBread;
+            accountArray[i]= SAObject;
         }
 
         //use .replace to get rid of the square brackets and commas in the printout

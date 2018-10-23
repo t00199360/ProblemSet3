@@ -25,6 +25,7 @@ public class SavingsAccount extends BankAccount
         return balance;
     }
 
+
     //mutator methods
 
 
@@ -45,6 +46,7 @@ public class SavingsAccount extends BankAccount
         this.balance = balance;
     }
 
+
     //no argument constructor
 
     public SavingsAccount()
@@ -54,7 +56,9 @@ public class SavingsAccount extends BankAccount
       this.name="unknown";
     }
 
-    //3 argument constructor
+
+
+    //4 argument constructor
     public SavingsAccount(int accNum, double balance, String name)
     {
         setName(name);
@@ -66,27 +70,30 @@ public class SavingsAccount extends BankAccount
     public String toString() {
         return "Name:" + name + "\nAccount Number:" + accNum + "\nBalance:" + balance;
     }
-    public String toString2() {
-        return "Name:" + name + "\nAccount Number:" + accNum + "\nBalance:" + balance;
-    }
 
-    private void askTrans() {
+  /*  private void askTrans() {
         withdraw(0);
         lodge(0);
     }
+*/
 
     @Override
-    public void calcTax(double a) {
-
-    }
-
-    @Override
-    public void lodge(double a) {
+    public void lodge(double a)
+    {
         balance=a+balance;
     }
 
     @Override
-    public void withdraw(double a) {
+    public void withdraw(double a)
+    {
         balance=balance-a;
     }
+
+    @Override
+    public double calcTax()
+    {
+        balance= balance * 0.8;
+    return balance;
+    }
 }
+

@@ -38,9 +38,19 @@ public abstract class BankAccount implements Transactable, Taxable
 
     //2 argument constructor
 
-    public BankAccount(int accNum,String name)
+   /* public BankAccount(int accNum,String name)
     {
         this.accNum=accNum;
         this.name=name;
-    }
+    }*/
+
+
+    public abstract double calcTax ();
+
+    public abstract void lodge(double a);
+
+    public abstract void withdraw(double a);
+
+
+
 }
