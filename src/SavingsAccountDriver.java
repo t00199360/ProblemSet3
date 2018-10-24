@@ -40,8 +40,9 @@ public class SavingsAccountDriver
             System.out.print(SAObject.getBalance());
             SAObject.withdraw(newBal);
 
-            double balAfterTax = s1.calcTax();
-            JOptionPane.showMessageDialog(null,"This is your balance after tax: " + balAfterTax);
+            s1.calcTax();
+            SAObject.calcTax();
+            JOptionPane.showMessageDialog(null,"This is your balance after tax: " /*+ s1.getBalance() + " "*/ + SAObject.getBalance());
 
             accountArray[i]= SAObject;
         }

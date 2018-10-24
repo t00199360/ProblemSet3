@@ -92,8 +92,9 @@ public class SavingsAccount extends BankAccount
     @Override
     public double calcTax()
     {
-        balance= balance * 0.8;
-    return balance;
+        balance -= balance * 0.08;
+        return balance;
+
     }
 }
 
